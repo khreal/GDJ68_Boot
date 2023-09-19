@@ -32,17 +32,36 @@ class NoticeDAOTest {
 	 * }
 	 */
 
+	/*
+	 * @Test void getDeleteTest() throws Exception{ NoticeVO noticeVO = new
+	 * NoticeVO(); noticeVO.setBoardNo(12L);
+	 * 
+	 * int result = noticeDAO.setDelete(noticeVO); assertEquals(1, result); }
+	 */
+	
 	@Test
-	void getListTest() throws Exception {
-		Pager pager = new Pager();
-		pager.setStartRow(0L);
-		pager.setLastRow(10L);
-		pager.setKind("1");
-		pager.setSearch("20");
-
-		List<BoardVO> ar = noticeDAO.getList(pager);
-		assertEquals(2, ar.size());
-
+	void getUpdateTest() throws Exception{
+		NoticeVO noticeVO = new NoticeVO();
+		noticeVO.setBoardNo(13L);
+		
+		int result = noticeDAO.setDelete(noticeVO);
+		assertEquals(1, result);
 	}
+	
+	
+	
+	/*
+	 * @Test void getCountTest() throws Exception{ Pager pager = new Pager();
+	 * pager.setKind("1"); pager.setSearch("20"); Long count =
+	 * noticeDAO.getCount(pager); assertEquals(2, count); }
+	 */
+	
+	/*
+	 * @Test void getListTest() throws Exception { Pager pager = new Pager();
+	 * pager.setStartRow(0L); pager.setLastRow(10L); pager.setKind("1");
+	 * pager.setSearch("20");
+	 * 
+	 * List<BoardVO> ar = noticeDAO.getList(pager); assertEquals(2, ar.size()); }
+	 */
 
 }
