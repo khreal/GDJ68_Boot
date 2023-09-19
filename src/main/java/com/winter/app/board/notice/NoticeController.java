@@ -24,8 +24,8 @@ public class NoticeController {
 	//Model and View, void, String
 	@GetMapping("/list")
 	public String getList(Pager pager, Model model) throws Exception{
-//		List<BoardVO> ar = noticeService.getList(pager);
-//		model.addAttribute("list", ar);
+		List<BoardVO> ar = noticeService.getList(pager);
+		model.addAttribute("list", ar);
 		//error, warn, info, debug, trace
 		log.error("getList 실행");
 		return "board/list";

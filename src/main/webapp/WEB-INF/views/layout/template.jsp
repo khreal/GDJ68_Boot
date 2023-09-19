@@ -20,13 +20,13 @@
     	<div id="content-wrapper" class="d-flex flex-column">
     		<div id="content">
     			<c:import url="/WEB-INF/views/layout/topbar.jsp"></c:import>
-    		
+    		</div>
     		
     		 <div class="container-fluid">
     		 	<h1>List Page</h1>
     		 
     		 </div>
-    		</div>
+    		
     		<c:import url="/WEB-INF/views/layout/footer.jsp">	</c:import>
     	</div>
     
