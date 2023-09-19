@@ -27,7 +27,7 @@ public class NoticeController {
 		List<BoardVO> ar = noticeService.getList(pager);
 		model.addAttribute("list", ar);
 		//error, warn, info, debug, trace
-		log.error("getList 실행");
+//		log.error("getList 실행");
 		return "board/list";
 				
 	}
