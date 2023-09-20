@@ -49,6 +49,11 @@
 								</table>
 							</div>
 						</div>
+						<c:forEach items="${dto.list}" var="f">
+								<img alt="" src="../files/${board}/${f.fileName}">
+								<a href="./fileDown?fileNum=${f.fileNum}">${f.oriName}</a>
+							</c:forEach>
+
     	 			
     	 			<a href="./update?boardNo=${dto.boardNo}" class="btn btn-primary btn-icon-split">
                                         <span class="icon text-white-50">
@@ -63,9 +68,13 @@
                                         <span class="text">글삭제</span>
                     </a>
     	 			</div>
+    	 									<div class="row">
+
     		 
     		 </div>
     		 </div>
+    		 							
+						</div>
     		
     		<c:import url="/WEB-INF/views/layout/footer.jsp">	</c:import>
     	</div>

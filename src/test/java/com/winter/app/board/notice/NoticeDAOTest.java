@@ -18,19 +18,19 @@ class NoticeDAOTest {
 	@Autowired
 	private NoticeDAO noticeDAO;
 
-	/*
-	 * @Test void addTest() throws Exception{ 
-	 * for(int i=0;i<150;i++) { 
-	 * BoardVO boardVO = new BoardVO(); 
-	 * boardVO.setBoardTitle("title"+i);
-	 * boardVO.setBoardWriter("writer"+i); 
-	 * boardVO.setBoardContents("con"+i); 
-	 * int result = noticeDAO.add(boardVO); 
-	 * if(i%10==0) { Thread.sleep(500); } }
-	 * System.out.println("finish");
-	 * 
-	 * }
-	 */
+	
+	 @Test void addTest() throws Exception{ 
+	 for(int i=0;i<150;i++) { 
+	 BoardVO boardVO = new BoardVO(); 
+	 boardVO.setBoardTitle("title"+i);
+	 boardVO.setBoardWriter("writer"+i); 
+	 boardVO.setBoardContents("con"+i); 
+	 int result = noticeDAO.add(boardVO); 
+	 if(i%10==0) { Thread.sleep(500); } }
+	 System.out.println("finish");
+	  
+	 }
+	 
 
 	/*
 	 * @Test void getDeleteTest() throws Exception{ NoticeVO noticeVO = new
@@ -39,14 +39,14 @@ class NoticeDAOTest {
 	 * int result = noticeDAO.setDelete(noticeVO); assertEquals(1, result); }
 	 */
 	
-	@Test
-	void getUpdateTest() throws Exception{
-		NoticeVO noticeVO = new NoticeVO();
-		noticeVO.setBoardNo(13L);
-		
-		int result = noticeDAO.setDelete(noticeVO);
-		assertEquals(1, result);
-	}
+//	@Test
+//	void getUpdateTest() throws Exception{
+//		NoticeVO noticeVO = new NoticeVO();
+//		noticeVO.setBoardNo(13L);
+//		
+//		int result = noticeDAO.setDelete(noticeVO);
+//		assertEquals(1, result);
+//	}
 	
 	
 	

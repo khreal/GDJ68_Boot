@@ -1,6 +1,7 @@
 package com.winter.app.board.notice;
 
 import java.sql.Date;
+import java.util.List;
 
 import com.winter.app.board.BoardVO;
 
@@ -14,6 +15,6 @@ public class NoticeVO extends BoardVO{
 	private Long ref;
 	private Long step;
 	private Long depth;
-
+	private List<NoticeFileVO> list;
 
 }
