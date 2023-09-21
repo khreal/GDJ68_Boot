@@ -32,7 +32,7 @@ public class NoticeController {
 	}
 	
 	@GetMapping("fileDown")
-	public String getFileDown(FileVO fileVO, Model model ) throws Exception{
+	public String getFileDown(FileVO fileVO, Model model) throws Exception{
 		fileVO = noticeService.getFileDetail(fileVO);
 		model.addAttribute("fileVO", fileVO);
 		return "fileDownView";
@@ -45,7 +45,7 @@ public class NoticeController {
 		model.addAttribute("list", ar);
 		//error, warn, info, debug, trace
 //		log.error("getList 실행");
-		return "board/list";				
+		return "board/list";
 	}
 	
 	@GetMapping("add")

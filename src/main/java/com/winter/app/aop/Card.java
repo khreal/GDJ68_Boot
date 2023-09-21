@@ -13,11 +13,11 @@ import lombok.extern.slf4j.Slf4j;
 public class Card {
 
 	//advice
-//	@Before("excution(* com.winter.app.aop.Transfer.*())")
-//	public void cardCheck() throws Exception {
-//		log.info("==========================================");
-//		log.info("Card Check");
-//		log.info("==========================================");
-//		
-//	}
+	@Before("execution(* com.winter.app.aop.Transfer.*())")
+	public void cardCheck() throws Exception {
+		log.info("==========================================");
+		log.info("Card Check");
+		log.info("==========================================");
+		
+	}
 }

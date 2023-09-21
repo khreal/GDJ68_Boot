@@ -14,13 +14,13 @@ class TransferTest {
 	@Autowired
 	private Card card;
 	
-//	@Test
-//	void test() throws Exception {
-//
-//		transfer.useBus();
-//
-//		transfer.useSubway();
-//
-//	}
+	@Test
+	void test() throws Exception {
+
+		transfer.useBus();
+
+		transfer.useSubway();
+
+	}
 
 }
