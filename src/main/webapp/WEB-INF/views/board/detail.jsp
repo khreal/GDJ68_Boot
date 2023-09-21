@@ -50,7 +50,8 @@
 							</div>
 						</div>
 						<c:forEach items="${dto.list}" var="f">
-								<img alt="" src="../files/${board}/${f.fileName}">
+							<%-- 	<img alt="" src="../files/${board}/${f.fileName}"> --%>
+									<img alt="" src="/upload/${board}/${f.fileName}">
 								<a href="./fileDown?fileNum=${f.fileNum}">${f.oriName}</a>
 							</c:forEach>
 
