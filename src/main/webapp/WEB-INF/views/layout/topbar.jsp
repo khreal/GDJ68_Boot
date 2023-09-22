@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
@@ -23,6 +24,18 @@
                     </form>
 
                     <!-- Topbar Navbar -->
+                    <c:if test="${empty member}">
+                    <a id="join" href="/member/join">
+                    회원가입  
+                    </a>
+                    
+                    <a id="logng" href="/member/login" >
+                    로그인
+                    </a>
+                    </c:if>
+                    
+                    <c:if test="${not empty member}">
+                    
                     <ul class="navbar-nav ml-auto">
 
                         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
@@ -183,9 +196,9 @@
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
                                 </a>
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="/member/update">
                                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
+                                    정보수정
                                 </a>
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -200,6 +213,6 @@
                         </li>
 
                     </ul>
-
+					</c:if>
                 </nav>
                 <!-- End of Topbar -->
